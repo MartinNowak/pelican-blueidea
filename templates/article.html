@@ -29,6 +29,13 @@
       </script>
     </div>
     {% endif %}
+    {% if ISSO_SITEURL and SITEURL and article.status != "draft" %}
+    <div class="comments">
+      <section id="isso-thread"></section>
+      <script data-isso="{{ ISSO_SITEURL }}/"
+              src="{{ ISSO_SITEURL }}/js/embed.min.js"></script>
+    </div>
+    {% endif %}
 
   </article>
 </section>
